@@ -1,0 +1,112 @@
+body {
+    background-image: linear-gradient(90deg, #85DCBA, #41B3A3);
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+}
+
+nav {
+    top: 0;
+    margin-left: .4em;
+    margin-right: 2em;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.feather {
+    height: 3em;
+    transition: transform .6s;
+}
+
+.feather:hover {
+    transform: skewX(25deg);
+}
+
+.dropdown-btn {
+    background-color: transparent;
+    border: transparent;
+    transition: transform .6s;
+}
+
+.dropdown-btn:hover {
+    transform: scale(1.5);
+}
+
+.dropdown-links {
+    display: none;
+    position: fixed;
+    background-color: #f4f7f6;
+    width: 10em; 
+}
+
+.dropdown-links a {
+    color: #2B483D;
+    text-decoration: none;
+    padding: 2em;
+}
+
+#hamburger-icon:hover .dropdown-links {
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.icon-line {
+    width: 2em;
+    height: 6px;
+    background-color: #2B483D;
+    margin: 4px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+.prompt {
+    background-color: #f4f7f6;
+    color: #2B483D;
+    text-align: center;
+    border: 1px solid #2B483D;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em;
+    width: 25%;
+    box-shadow: 3px 3px .4rem;
+}
+
+.prompt:hover {
+    font-weight: 800;
+    background-color:#2B483D; 
+    color: white;
+}
+
+.textbox {
+    background-color: #f4f7f6;
+    color: #2B483D;
+    border-radius: 10px;
+    border: 3px solid #2B483D;
+    text-align: center;
+    font-size: 2em;
+    margin: 1em 2em;
+    height: 10em;
+}
+
+@media screen and (max-width: 375px) {
+
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .textbox {
+        margin: .5em;
+    }
+}
+
+
+
+
