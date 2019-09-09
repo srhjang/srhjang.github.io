@@ -5,6 +5,15 @@
 // 2. change "Write about..." text and display random prompt
 
 $(document).ready(function() {
+    $('#threeButton').click(getThree) 
+        $(".textbox").fadeIn(3000);
+    $('#pastButton').click(getPast)
+    $('#futureButton').click(getFuture)
+    $('#youButton').click(getYou)
+    $('#surpriseButton').click(getSurprise)
+    $('#presentButton').click(getPresent)
+
+
 
     function getThree() {
         var threePrompts = [
@@ -38,9 +47,9 @@ $(document).ready(function() {
 
         var randomThree = threePrompts[Math.floor(Math.random() * threePrompts.length)]
         $('.textbox').html("3 " + randomThree)
+
     }
 
-    $('#threeButton').click(getThree)
 
     function getPast () {
         var pastPrompts = [
@@ -64,7 +73,6 @@ $(document).ready(function() {
         $('.textbox').html(randomPast)
     }
 
-    $('#pastButton').click(getPast)
 
     function getFuture () {
         var futurePrompts = [
@@ -85,7 +93,6 @@ $(document).ready(function() {
         $('.textbox').html(randomFuture)
     }
 
-    $('#futureButton').click(getFuture)
 
     function getYou() {
         var youPrompts = [
@@ -113,7 +120,6 @@ $(document).ready(function() {
         $('.textbox').html(randomYou)
     }
 
-    $('#youButton').click(getYou)
 
     function getSurprise() {
         var surprisePrompts = [
@@ -142,14 +148,11 @@ $(document).ready(function() {
         $('.textbox').html(randomSurprise)
     }
 
-    $('#surpriseButton').click(getSurprise)
-
 
     function refreshPage() {
         window.location.reload()
     }
 
-    $('.feather').click(refreshPage)
 
     function getPresent () {
         var presentPrompts = [
@@ -183,7 +186,8 @@ $(document).ready(function() {
         $('.textbox').html(today + '<br />' + randomPresent)
     }
 
-    $('#presentButton').click(getPresent)
+
+
 
 })
 
