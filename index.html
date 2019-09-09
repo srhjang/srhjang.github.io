@@ -4,12 +4,42 @@
         <title>Journal</title>
         <link rel="icon" href ="images/feather.png">
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+
     <body> 
-        
-        <div class="feather">
-            <a href="finalproj.html"> <img src="images/feather.png" alt="icon"></a>
-        </div>
-    </body>
+            <div class="container">
+              <a class="feather modal-trigger" href="#modal"><img src="images/feather.png"></a>
+            
+              <!-- Modal Structure -->
+              <div id="modal" class="modal">
+                <div class="modal-content">
+                  <h4>Journal Prompt Generator</h4>
+                  <p>Journaling does more than just help you record your memories. It can be an incredible stress management tool, give a greater sense of emotional well-being, and improve immune function.
+                       If you find yourself staring at a blank page and need help writing your first line, use this writing prompt generator to get started! 
+                  </p>
+             
+                </div>
+                <div class="modal-footer">
+                  <a href="finalproj.html" class="modal-action modal-close waves-effect waves-light btn teal darken-1">Start Writing!</a>
+                </div>
+              </div>
+            </div>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+ 
+            $(document).ready(function(){
+             
+                $('.modal').modal();
+             
+              })
+             
+    </script>
+    <script src="js/index.js"></script>
 </html>

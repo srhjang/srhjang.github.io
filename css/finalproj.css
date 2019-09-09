@@ -6,11 +6,12 @@ body {
 
 nav {
     top: 0;
-    background-color: teal;
+    background-color: transparent !important;
     padding: 1em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
 }
 
 .nav-wrapper {
@@ -33,7 +34,7 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 4em;
+    margin-top: 6em;
 }
 
 .prompt {
@@ -54,6 +55,7 @@ nav {
     font-weight: 800;
     color:white;
 }
+
 
 .textbox {
     background-color: #f4f7f6;

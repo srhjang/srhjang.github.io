@@ -69,7 +69,7 @@ $(document).ready(function() {
     function getFuture () {
         var futurePrompts = [
             "Where do you want to be in 5 years?",
-            "Where do you want to be in 20 years",
+            "Where do you want to be in 20 years?",
             "Where would you like to retire?",
             "What home improvements would you like to make?",
             "What is one thing you have been procrastinating. Why?",
