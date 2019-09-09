@@ -6,27 +6,93 @@ body {
 
 nav {
     top: 0;
-    margin-left: .4em;
-    margin-right: 2em;
+    background-color: teal;
     padding: 1em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+.nav-wrapper {
+    background-color: white;
+    margin: 0;
+}
+
 .feather {
     height: 3em;
     transition: transform .6s;
+    margin-left: .6em;
 }
 
 .feather:hover {
     transform: skewX(25deg);
 }
 
-.dropdown-btn {
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+.prompt {
+    background-color: #f4f7f6;
+    color: #2B483D;
+    text-align: center;
+    font-size: 1em;
+    border: 1px solid #2B483D;
+    border-radius: 15px;
+    padding: 1.6em;
+    margin: 2em;
+    width: 26%;
+    box-shadow: 3px 3px .4rem;
+}
+
+.prompt:hover {
+    background-color:#2B483D; 
+    font-weight: 800;
+    color:white;
+}
+
+.textbox {
+    background-color: #f4f7f6;
+    color: #2B483D;
+    border-radius: 10px;
+    border: 3px solid #2B483D;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+    font-size: 2em;
+    height: 8em;
+    margin: 3em;
+}
+
+/* @media screen and (min-width: 375px) {
+
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    /* .textbox {
+        margin: .5em;
+    }
+}
+
+@media screen and (min-width:768) {
+    
+}
+ */ 
+
+
+
+ /* .dropdown-btn {
     background-color: transparent;
     border: transparent;
     transition: transform .6s;
+    margin-right: 2em;
 }
 
 .dropdown-btn:hover {
@@ -56,57 +122,4 @@ nav {
     height: 6px;
     background-color: #2B483D;
     margin: 4px;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 4em;
-}
-
-.prompt {
-    background-color: #f4f7f6;
-    color: #2B483D;
-    text-align: center;
-    border: 1px solid #2B483D;
-    border-radius: 10px;
-    padding: 1em;
-    margin: 1em;
-    width: 25%;
-    box-shadow: 3px 3px .4rem;
-}
-
-.prompt:hover {
-    font-weight: 800;
-    background-color:#2B483D; 
-    color: white;
-}
-
-.textbox {
-    background-color: #f4f7f6;
-    color: #2B483D;
-    border-radius: 10px;
-    border: 3px solid #2B483D;
-    text-align: center;
-    font-size: 2em;
-    margin: 1em 2em;
-    height: 10em;
-}
-
-@media screen and (max-width: 375px) {
-
-    nav {
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .textbox {
-        margin: .5em;
-    }
-}
-
-
-
-
+} */

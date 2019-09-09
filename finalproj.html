@@ -2,42 +2,53 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>JQ | Generator </title>
+        <title> Journal|Generator </title>
         <link rel="icon" href ="images/feather.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/finalproj.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            <nav>
-                <div>
+            <nav class="nav-bar">
+                <div class="nav-bar">
                     <img class="feather" src="images/feather.png" alt="icon"></div>
-                <div id="hamburger-icon">
-                    <button class="dropdown-btn">
-                        <div class="icon-line"></div>
-                        <div class="icon-line"></div>
-                        <div class="icon-line"></div>
-                    </button>
-                    <div class="dropdown-links">
-                        <a href="#">Journal Benefits</a>
-                        <a href="writing-apps.html">Digital Journals</a>
-                    </div>
-                </div>
+
             </nav>
         </header>
 
-        <div class="container">
-                <div class="prompt">Past</div>
-                <div class="prompt">Present</div>
-                <div class="prompt">Future</div>
-                <div class="prompt">You</div>
-                <div class="prompt">Dream</div>
-                <div class="prompt">Surprise</div>
+        <div id="container">
+            <input type ="button" id = "threeButton" class="waves-effect waves-light prompt" value="3 Things" title="A perfect icebreaker to start writing. Make a list of 3 things across different categories. Be sure to give an explanation for each.">
+            <input type ="button" id = "presentButton" class="waves-effect waves-light prompt" value="Present" title="Ideas for writing about all things in your present-day life.">
+            <input type ="button" id = "pastButton" class="waves-effect waves-light prompt" value="Past" title="Reflect on memories from your childhood or recent past experiences.">
+            <input type ="button" id = "futureButton" class="waves-effect waves-light prompt" value="Future" title="Where/what/when do you want to be in the future?">
+            <input type ="button" id = "youButton" class="waves-effect waves-light prompt" value="You" title="Prompts to reflect on who you are.">  
+            <input type ="button" id = "surpriseButton" class="waves-effect waves-light prompt" value="Surprise" title="Random ideas for exploring your creative side.">
         </div >
-        <div class="textbox">
-            <p>Let's write about...</p>
-        </div>
 
+        <div class="textbox">
+            <p>What would you like to write about? Click on a button for some ideas...</p>
+        </div>
+        
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="js/finalproj.js"></script>
     </body>
 </html>
+
+
+<!-- <div id="hamburger-icon">
+        <button class="dropdown-btn">
+            <div class="icon-line"></div>
+            <div class="icon-line"></div>
+            <div class="icon-line"></div>
+        </button>
+        <ul class="dropdown-links">
+            <li a href="#">Journal Benefits</a></li>
+            <li class="writing-app" a href="writing-apps.html">Digital Journals</a></li>
+        </ul>
+    </div> -->
