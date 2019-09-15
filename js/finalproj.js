@@ -6,13 +6,12 @@
 
 $(document).ready(function() {
     $('#threeButton').click(getThree) 
-        $(".textbox").fadeIn(3000);
+        $(".textbox").fadeIn(3000)
     $('#pastButton').click(getPast)
     $('#futureButton').click(getFuture)
     $('#youButton').click(getYou)
     $('#surpriseButton').click(getSurprise)
     $('#presentButton').click(getPresent)
-
 
 
     function getThree() {
@@ -133,24 +132,21 @@ $(document).ready(function() {
             "If you could meet any fictional character, who would it be?",
             "What song best sums you up?",
             "Which of your five senses would you say is your strongest?",
-            "How old were you when you learned Santa isn't real. How did you find our and how did you react?",
+            "How old were you when you learned Santa isn't real. How did you find out and how did you react?",
             "Write about your first job.",
-            "You discover you are on in your own version of The Truman Show. What would you do?",
+            "You discover you are in your own version of The Truman Show. What would you do?",
             "Before making a telephone call, do you ever rehearse what you are going to say? Why?",
             "What qualities do you want in a romantic partner?",
             "What famous world festivals would you like to attend?",
             "What is your favorite holiday?",
             "What have you read recently on the news that caught your attention?",
-            "You have a chance to be one of the first people to live on Mars. Would you take it?"
+            "You have a chance to be one of the first people to live on Mars. Would you take it?",
+            "What was the first car you drove?",
+            "How often do you recycle? If you do not, why not?"
         ]
 
         var randomSurprise = surprisePrompts[Math.floor(Math.random() * surprisePrompts.length)]
         $('.textbox').html(randomSurprise)
-    }
-
-
-    function refreshPage() {
-        window.location.reload()
     }
 
 
@@ -190,5 +186,3 @@ $(document).ready(function() {
 
 
 })
-
-

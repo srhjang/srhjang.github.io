@@ -94,7 +94,7 @@ nav {
 
 
 
- /* .dropdown-btn {
+ .dropdown-btn {
     background-color: transparent;
     border: transparent;
     transition: transform .6s;
@@ -102,7 +102,7 @@ nav {
 }
 
 .dropdown-btn:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .dropdown-links {
@@ -128,4 +128,13 @@ nav {
     height: 6px;
     background-color: #2B483D;
     margin: 4px;
-} */
+}
+
+.hamburger-icon{
+    overflow: none
+}
+
+
+.button #presentButton {
+    background-color: white;
+}
