@@ -7,16 +7,12 @@ body {
 nav {
     top: 0;
     background-color: transparent !important;
+    margin-right: 2em;
     padding: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
     position: fixed;
-}
-
-.nav-wrapper {
-    background-color: white;
-    margin: 0;
 }
 
 .feather {
@@ -28,6 +24,15 @@ nav {
 .feather:hover {
     transform: skewX(25deg);
 }
+
+nav i.material-icons {
+    font-size: 2.6em !important;
+    color: black !important;
+    margin-right: .8em;
+    margin-bottom: .6em;
+}
+
+/* -- Styling for prompt buttons -- */
 
 #container {
     display: flex;
@@ -70,8 +75,8 @@ nav {
     text-align: center;
     vertical-align: middle;
     font-size: 2em;
-    height: 8em;
     margin: 3em;
+    overflow-wrap: break-word;
 }
 
 
@@ -94,47 +99,4 @@ nav {
 
 
 
- .dropdown-btn {
-    background-color: transparent;
-    border: transparent;
-    transition: transform .6s;
-    margin-right: 2em;
-}
-
-.dropdown-btn:hover {
-    transform: scale(1.2);
-}
-
-.dropdown-links {
-    display: none;
-    position: fixed;
-    background-color: #f4f7f6;
-    width: 10em; 
-}
-
-.dropdown-links a {
-    color: #2B483D;
-    text-decoration: none;
-    padding: 2em;
-}
-
-#hamburger-icon:hover .dropdown-links {
-    display: inline-block;
-    border-radius: 5px;
-}
-
-.icon-line {
-    width: 2em;
-    height: 6px;
-    background-color: #2B483D;
-    margin: 4px;
-}
-
-.hamburger-icon{
-    overflow: none
-}
-
-
-.button #presentButton {
-    background-color: white;
-}
+ 

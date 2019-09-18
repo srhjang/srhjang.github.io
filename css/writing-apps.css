@@ -7,56 +7,30 @@ body {
 
 nav {
     top: 0;
-    margin-left: .4em;
+    background-color: transparent !important;
     margin-right: 2em;
     padding: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    position: sticky;
 }
 
 .feather {
     height: 3em;
     transition: transform .6s;
+
 }
 
 .feather:hover {
     transform: skewX(25deg);
 }
 
-.dropdown-btn {
-    background-color: transparent;
-    border: transparent;
-    transition: transform .6s;
-}
-
-.dropdown-btn:hover {
-    transform: scale(1.5);
-}
-
-.dropdown-links {
-    display: none;
-    position: fixed;
-    background-color: #f4f7f6;
-    width: 10em; 
-}
-
-.dropdown-links a {
-    color: #2B483D;
-    text-decoration: none;
-    padding: 2em;
-}
-
-#hamburger-icon:hover .dropdown-links {
-    display: inline-block;
-    border-radius: 5px;
-}
-
-.icon-line {
-    width: 2em;
-    height: 6px;
-    background-color: #2B483D;
-    margin: 4px;
+nav i.material-icons {
+    font-size: 2.6em !important;
+    color: black !important;
+    margin-right: .8em;
+    margin-bottom: .6em;
 }
 
 .wrapper {
@@ -69,10 +43,15 @@ nav {
 h1 {
     text-align: center;
     padding-bottom: .5em;
+    font-size: 2em !important;
+    font-weight: bold !important;
 }
 
 h3 {
     margin: auto 1em;
+    font-size: 1.17em !important;
+    text-align: center !important;
+    font-weight: bold !important;
 }
 
 ul {
@@ -82,7 +61,7 @@ ul {
 
 a {
     color: #2B483D;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 

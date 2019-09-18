@@ -3,17 +3,105 @@
 // when button is clicked
 // 1. generate random index
 // 2. change "Write about..." text and display random prompt
+let prev;
 
 $(document).ready(function() {
     $('#threeButton').click(getThree) 
-        $(".textbox").fadeIn(3000)
-    $('#pastButton').click(getPast)
-    $('#futureButton').click(getFuture)
-    $('#youButton').click(getYou)
-    $('#surpriseButton').click(getSurprise)
     $('#presentButton').click(getPresent)
+    $('#pastButton').click(function() {getRandom(pastPrompts)})
+    $('#futureButton').click(function() {getRandom(futurePrompts)})
+    $('#youButton').click(function() {getRandom(youPrompts)})
+    $('#surpriseButton').click(function() {getRandom(surprisePrompts)})
+
+    function getRandom(option) {
+        let randomIndex = Math.floor(Math.random() * option.length)
+        while (prev === randomIndex) {
+            randomIndex = Math.floor(Math.random() * option.length)
+        }
+        var random = option[randomIndex]
+        $('.textbox').html(random)
+        prev = randomIndex
+    }
+
+    var pastPrompts = [
+        "What are the turning points in your life - what would be different now if you had made a different choice in the past.",
+        "What is your favorite summer childhood memory?",
+        "Describe your favorite hideaway.",
+        "What was your most beloved toy?",
+        "Did you have your own bedroom growing up or did you share with someone else? Describe your room.",
+        "Describe a family tradition that you grew up with.",
+        "What was your favorite food as a kid? Do you still enjoy it now?",
+        "What did you want to be when you grew up?",
+        "Describe a game or activity you played as a kid.",
+        "What is the most memorable place you visited in the last year?",
+        "What did you really love to do that you don't do anymore. Explain why you stopped and if you'd start again.",
+        "If you could go back to a different period in your life, what age or time period would you go back to and why?",
+        "What's one lesson you learned in the past five years? How did you learn this lesson?",
+        "Describe a difficult experience you had in the past. How did you overcome it?"
+    ]
+
+    var futurePrompts = [
+        "Where do you want to be in 5 years?",
+        "Where do you want to be in 20 years?",
+        "Where would you like to retire?",
+        "What home improvements would you like to make?",
+        "What is one thing you have been procrastinating. Why?",
+        "Make a bucket list.",
+        "Write down how you can improve your life.",
+        "Describe the places you wish to see or vacations you plan to take.",
+        "What is your dream career?",
+        "What is the next thing you want to learn?",
+        "If you knew that in one year you would die suddenly, would you change anything about the way you are now living? Why?",
+    ]
+
+    var youPrompts = [
+        "Given the chance of anyone in the world, whom would you want as a dinner guest?",
+        "Would you like to be famous? In what way?",
+        "What would constitute a perfect day for you?",
+        "For what in your life do you feel most grateful?",
+        "Is there something that you’ve dreamed of doing for a long time? Why haven’t you done it?",
+        "What do you value most in a friendship?",
+        "Some of the things that make me happy are...",
+        "Write about your first crush.",
+        "If you could change anything about the way you were raised, what would it be?",
+        "How do you deal with anger?",
+        "I wish others knew this about me...",
+        "If you could wake up tomorrow having gained any one quality or ability, what would it be?",
+        "What makes you unique?",
+        "When did you feel truly independent for the first time?",
+        "What character traits do you need to work on?",
+        "What are you really good at?",
+        "How do you indulge yourself?",
+        "What is your most terrible memory?",
+        "How do you think others see you when they meet you for the first time?"
+    ]
+
+    var surprisePrompts = [
+            "If you were able to live to the age of 90 and retain either the mind or body of a 30-year-old for the last 60 years of your life, which would you want?",
+            "If a crystal ball could tell you the truth about yourself, your life, the future or anything else, what would you want to know?",
+            "Marvel or DC Comics?",
+            "What's the best book you read this year?",
+            "How do you feel about your relationship with your mother?",
+            "What, if anything, is too serious to be joked about?",
+            "If you were to die this evening with no opportunity to communicate with anyone, what would you most regret not having told someone? Why haven’t you told them yet?",
+            "If you could meet any fictional character, who would it be?",
+            "What song best sums you up?",
+            "Which of your five senses would you say is your strongest?",
+            "How old were you when you learned Santa isn't real. How did you find out and how did you react?",
+            "Write about your first job.",
+            "You discover you are in your own version of The Truman Show. What would you do?",
+            "Before making a telephone call, do you ever rehearse what you are going to say? Why?",
+            "What qualities do you want in a romantic partner?",
+            "What famous world festivals would you like to attend?",
+            "What is your favorite holiday?",
+            "What have you read recently on the news that caught your attention?",
+            "You have a chance to be one of the first people to live on Mars. Would you take it?",
+            "What was the first car you drove?",
+            "How often do you recycle? If you don't, why not?"
+        ]
 
 
+    /* function for the 3 Things button*/
     function getThree() {
         var threePrompts = [
             "things you can't go without everyday",
@@ -44,112 +132,16 @@ $(document).ready(function() {
             "subjects or activites you would like to be an expert in"
         ]
 
-        var randomThree = threePrompts[Math.floor(Math.random() * threePrompts.length)]
+        let randomThreeIndex = Math.floor(Math.random() * threePrompts.length)
+        while (prev === randomThreeIndex) {
+            randomThreeIndex = Math.floor(Math.random() * threePrompts.length)
+        }
+        var randomThree = threePrompts[randomThreeIndex]
         $('.textbox').html("3 " + randomThree)
-
+        prev = randomThreeIndex
     }
 
-
-    function getPast () {
-        var pastPrompts = [
-            "What are the turning points in your life - what would be different now if you had made a different choice.",
-            "What is your favorite summer childhood memory?",
-            "Describe your favorite hideaway.",
-            "What was your most beloved toy?",
-            "Did you have your own bedroom growing up or did you share with someone else? Describe your room.",
-            "Describe a family tradition that you grew up with.",
-            "What was your favorite food as a kid? Do you still enjoy it now?",
-            "What did you want to be when you grew up?",
-            "Describe a game or activity you played as a kid.",
-            "What is the most memorable place you visited in the last year?",
-            "What did you really love to do that you don't do anymore. Explain why you stopped and if you'd start again.",
-            "If you could go back to a different period in your life, what age or time period would you go back to and why?",
-            "What's one lesson you learned in the past five years? How did you learn this lesson?",
-            "Describe a difficult experience you had in the past. How did you overcome it?"
-        ]
-
-        var randomPast = pastPrompts[Math.floor(Math.random() * pastPrompts.length)]
-        $('.textbox').html(randomPast)
-    }
-
-
-    function getFuture () {
-        var futurePrompts = [
-            "Where do you want to be in 5 years?",
-            "Where do you want to be in 20 years?",
-            "Where would you like to retire?",
-            "What home improvements would you like to make?",
-            "What is one thing you have been procrastinating. Why?",
-            "Make a bucket list.",
-            "Write down how you can improve your life.",
-            "Describe the places you wish to see or vacations you plan to take.",
-            "What is your dream career?",
-            "What is the next thing you want to learn?",
-            "If you knew that in one year you would die suddenly, would you change anything about the way you are now living? Why?",
-        ]
-
-        var randomFuture = futurePrompts[Math.floor(Math.random() * futurePrompts.length)]
-        $('.textbox').html(randomFuture)
-    }
-
-
-    function getYou() {
-        var youPrompts = [
-            "Given the chance of anyone in the world, whom would you want as a dinner guest?",
-            "Would you like to be famous? In what way?",
-            "What would constitute a perfect day for you?",
-            "For what in your life do you feel most grateful?",
-            "Is there something that you’ve dreamed of doing for a long time? Why haven’t you done it?",
-            "What do you value most in a friendship?",
-            "Some of the things that make me happy are...",
-            "Write about your first crush.",
-            "If you could change anything about the way you were raised, what would it be?",
-            "How do you deal with anger?",
-            "I wish others knew this about me...",
-            "If you could wake up tomorrow having gained any one quality or ability, what would it be?",
-            "What makes you unique?",
-            "When did you feel truly independent for the first time?",
-            "What character traits do you need to work on?",
-            "What are you really good at?",
-            "How do you indulge yourself?",
-            "What is your most terrible memory?",
-            "How do you think others see you when they meet you for the first time?"
-        ]
-        var randomYou = youPrompts[Math.floor(Math.random() * youPrompts.length)]
-        $('.textbox').html(randomYou)
-    }
-
-
-    function getSurprise() {
-        var surprisePrompts = [
-            "If you were able to live to the age of 90 and retain either the mind or body of a 30-year-old for the last 60 years of your life, which would you want?",
-            "If a crystal ball could tell you the truth about yourself, your life, the future or anything else, what would you want to know?",
-            "Marvel or DC Comics?",
-            "What's the best book you read this year?",
-            "How do you feel about your relationship with your mother?",
-            "What, if anything, is too serious to be joked about?",
-            "If you were to die this evening with no opportunity to communicate with anyone, what would you most regret not having told someone? Why haven’t you told them yet?",
-            "If you could meet any fictional character, who would it be?",
-            "What song best sums you up?",
-            "Which of your five senses would you say is your strongest?",
-            "How old were you when you learned Santa isn't real. How did you find out and how did you react?",
-            "Write about your first job.",
-            "You discover you are in your own version of The Truman Show. What would you do?",
-            "Before making a telephone call, do you ever rehearse what you are going to say? Why?",
-            "What qualities do you want in a romantic partner?",
-            "What famous world festivals would you like to attend?",
-            "What is your favorite holiday?",
-            "What have you read recently on the news that caught your attention?",
-            "You have a chance to be one of the first people to live on Mars. Would you take it?",
-            "What was the first car you drove?",
-            "How often do you recycle? If you do not, why not?"
-        ]
-
-        var randomSurprise = surprisePrompts[Math.floor(Math.random() * surprisePrompts.length)]
-        $('.textbox').html(randomSurprise)
-    }
-
-
+    /* function for the Present button */
     function getPresent () {
         var presentPrompts = [
             "Who made you feel happy today?",
@@ -168,10 +160,15 @@ $(document).ready(function() {
             "An old friend re-enters your life today. What would you do with them?"
         ]
 
-        var randomPresent = presentPrompts[Math.floor(Math.random() * presentPrompts.length)]
-
-        const monthNames = [ "January", "February", "March", 'April', "May", "June", "July", "August", "September", "October", "November", "December"
+        var monthNames = [ "January", "February", "March", 'April', "May", "June", "July", "August", "September", "October", "November", "December"
         ]
+
+        let randomPresentIndex = Math.floor(Math.random() * presentPrompts.length)
+        while (prev === randomPresentIndex) {
+            randomPresentIndex = Math.floor(Math.random() * presentPrompts.length)
+        }
+        
+        var random = presentPrompts[randomPresentIndex]
 
         var today = new Date();
         var dd = today.getDate();
@@ -179,10 +176,9 @@ $(document).ready(function() {
         var yy = today.getFullYear();
 
         today = "Today is " + mm + " " + dd + ', ' + yy + '.';
-        $('.textbox').html(today + '<br />' + randomPresent)
+        $('.textbox').html(today + '<br />' + random)
+        prev = randomPresentIndex
     }
-
-
 
 
 })
