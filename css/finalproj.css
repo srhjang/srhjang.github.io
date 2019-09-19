@@ -1,8 +1,22 @@
+
+
 body {
     background-image: linear-gradient(90deg, #85DCBA, #41B3A3);
     font-family: 'Karla', sans-serif;
     margin: 0;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
 }
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+} 
 
 nav {
     top: 0;
@@ -29,8 +43,25 @@ nav {
 nav i.material-icons {
     font-size: 2.6em !important;
     color: black !important;
-    margin-right: .8em;
+    margin-right: .6em;
     margin-bottom: .6em;
+}
+
+nav i.material-icons:hover {
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 /* -- Styling for prompt buttons -- */
@@ -41,7 +72,6 @@ nav i.material-icons {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 6em;
-
 }
 
 .prompt {
@@ -55,7 +85,25 @@ nav i.material-icons {
     margin: 2em;
     width: 26%;
     box-shadow: 3px 3px .4rem;
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+
 }
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
 
 .prompt:hover {
     background-color:#2B483D; 
@@ -77,27 +125,31 @@ nav i.material-icons {
     vertical-align: middle;
     font-size: 2em;
     margin: 3em;
-    overflow-wrap: break-word;
 }
 
 
-/* @media screen and (min-width: 375px) {
+@media screen and (max-width: 378px) {
 
-    nav {
+    #container {
+        display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: center !important;
+        align-items: center;
     }
-    
-    /* .textbox {
+
+    .prompt {
+        font-size: 1.2em;
+        padding: 1em 6em;
         margin: .5em;
+        min-width: 80%
     }
-}
 
-@media screen and (min-width:768) {
+    .textbox {
+        margin: 1em;
+        padding: .6em;
+    }
+    .textbox p {
+        font-size: .8em;
+    }
     
-}
- */ 
-
-
-
- 
+} 

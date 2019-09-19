@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Journal|Digital Journals</title>
+        <title>Digital Journals</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/writing-apps.css">
         <link rel="icon" href ="images/feather.png">
@@ -24,18 +24,63 @@
             <h1>Looking to keep a digital journal? Try these apps!</h1>
             <h3>These are the best apps for keeping a digital journal of your life as it happens.</h3>
         </div>
-                <ul>
-                    <a href="https://apps.apple.com/us/app/id1044867788#?platform=iphone" target="_blank"><li>Day One</li>
-                        <img class="screenshot" src="images/dayone.png"></a>
-                    <a href="https://apps.apple.com/us/app/id980592846" target="_blank"><li>Memento</li>
-                        <img class="screenshot"  src="images/memento.png"></a>
-                    <a href="https://apps.apple.com/us/app/id1019230398" target="_blank"><li>Moodnotes</li>
-                        <img class="screenshot"  src="images/moodnotes.png"></a>
-                    <a href="https://apps.apple.com/us/app/id597077261" target="_blank"><li>Grid Diary</li>
-                        <img class="screenshot"  src="images/griddiary.png"></a>
-                    <a href="https://apps.apple.com/us/app/id1194023242" target="_blank"><li>Daylio</li>
-                        <img class="screenshot"  src="images/daylio.png"></a>
-                </ul>
 
+            <ul id="app-list">
+                <a href="#dayone-tag" class="app-list-item dayone"><li>○ Day One</li></a>
+                <a href="#momento-tag" class="app-list-item momento"><li>○ Momento</li></a>
+                <a href="#moodnotes-tag" class="app-list-item moodnotes"><li>○ Moodnotes</li></a>
+                <a href="#griddiary-tag" class="app-list-item griddiary"><li>○ Grid Diary</li></a>
+                <a href="#daylio-tag" class="app-list-item daylio"><li>○ Daylio</li></a>
+            </ul>
+
+            <ul class="app-screenshot">
+                <li class="screenshot-img">
+                    <a href="https://apps.apple.com/us/app/id1044867788#?platform=iphone" target="_blank" id="dayone-tag">Day One</a>
+                    <img class="image materialboxed" data-caption="Day One is best for writing quick journal entries in a simple, intuitive interface." src="images/dayone.png">
+                </li>
+            
+                <li class="screenshot-img">
+                    <a href="https://apps.apple.com/us/app/id980592846" target="_blank" id="momento-tag" >Momento</a>
+                    <img class="image materialboxed" data-caption="Momento is best for automated journaling from your social media feeds." src="images/memento.png">
+                </li>
+
+                <li class="screenshot-img">
+                    <a href="https://apps.apple.com/us/app/id1019230398" target="_blank" id="moodnotes-tag">Moodnotes</a>
+                    <img class="image materialboxed" data-caption="Moodnotes is CBT based thought journal to chart your emotions." src="images/moodnotes.png">
+                </li>
+
+                <li class="screenshot-img">
+                <a href="https://apps.apple.com/us/app/id597077261" target="_blank" id="griddiary-tag">Grid Diary</a>
+                <img class="image materialboxed" data-caption="Grid Diary is best for templated journaling."  src="images/griddiary.png">
+                </li>
+
+                <li class="screenshot-img">
+                <a href="https://apps.apple.com/us/app/id1194023242" target="_blank" id="daylio-tag">Daylio</a>
+                <img class="image materialboxed" data-caption="Daylio tracks daily activities and moods without having to write a single line." src="images/daylio.png">
+                </li>
+            </ul>
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/writing-apps.js"></script>
     </body>
 </html>
+
+
+            <!-- <a href="https://apps.apple.com/us/app/id1044867788#?platform=iphone" target="_blank">
+                <li><img class="image materialboxed" src="images/dayone.png"></li> 
+            <p id="memento-tag">Memento</p>
+            <a href="https://apps.apple.com/us/app/id980592846" target="_blank"><li></li>
+                <img class="image"  src="images/memento.png"></a>
+            <p id="moodnotes-tag">Moodnotes</p>
+            <a href="https://apps.apple.com/us/app/id1019230398" target="_blank"><li></li>
+                <img class="image"  src="images/moodnotes.png"></a>
+            <p id="griddiary-tag">Grid Diary</p>
+            <a href="https://apps.apple.com/us/app/id597077261" target="_blank"><li></li>
+                <img class="image"  src="images/griddiary.png"></a>
+            <p id="daylio-tag">Daylio</p>
+            <a href="https://apps.apple.com/us/app/id1194023242" target="_blank"><li></li>
+                <img class="image"  src="images/daylio.png"></a> -->

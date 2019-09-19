@@ -19,7 +19,7 @@ $(document).ready(function() {
             randomIndex = Math.floor(Math.random() * option.length)
         }
         var random = option[randomIndex]
-        $('.textbox').html(random)
+        $('.textbox').html(random) 
         prev = randomIndex
     }
 
@@ -28,10 +28,13 @@ $(document).ready(function() {
         "What is your favorite summer childhood memory?",
         "Describe your favorite hideaway.",
         "What was your most beloved toy?",
+        "Write about your first job.",
         "Did you have your own bedroom growing up or did you share with someone else? Describe your room.",
         "Describe a family tradition that you grew up with.",
         "What was your favorite food as a kid? Do you still enjoy it now?",
+        "What's the best book you read this year?",
         "What did you want to be when you grew up?",
+        "What was the first car that you drove?",
         "Describe a game or activity you played as a kid.",
         "What is the most memorable place you visited in the last year?",
         "What did you really love to do that you don't do anymore. Explain why you stopped and if you'd start again.",
@@ -43,11 +46,12 @@ $(document).ready(function() {
     var futurePrompts = [
         "Where do you want to be in 5 years?",
         "Where do you want to be in 20 years?",
+        "What qualities do you want in a romantic partner?",
         "Where would you like to retire?",
         "What home improvements would you like to make?",
         "What is one thing you have been procrastinating. Why?",
         "Make a bucket list.",
-        "Write down how you can improve your life.",
+        "Write down three activities you can start doing to improve your life.",
         "Describe the places you wish to see or vacations you plan to take.",
         "What is your dream career?",
         "What is the next thing you want to learn?",
@@ -57,12 +61,13 @@ $(document).ready(function() {
     var youPrompts = [
         "Given the chance of anyone in the world, whom would you want as a dinner guest?",
         "Would you like to be famous? In what way?",
+        "What song best sums you up?",
         "What would constitute a perfect day for you?",
         "For what in your life do you feel most grateful?",
         "Is there something that you’ve dreamed of doing for a long time? Why haven’t you done it?",
         "What do you value most in a friendship?",
         "Some of the things that make me happy are...",
-        "Write about your first crush.",
+        "Describe your first crush.",
         "If you could change anything about the way you were raised, what would it be?",
         "How do you deal with anger?",
         "I wish others knew this about me...",
@@ -71,34 +76,31 @@ $(document).ready(function() {
         "When did you feel truly independent for the first time?",
         "What character traits do you need to work on?",
         "What are you really good at?",
+        "Which of your five senses would you say is your strongest?",
         "How do you indulge yourself?",
         "What is your most terrible memory?",
-        "How do you think others see you when they meet you for the first time?"
+        "How do you think others see you when they meet you for the first time?",
+        "What is your favorite holiday?",
     ]
 
     var surprisePrompts = [
-            "If you were able to live to the age of 90 and retain either the mind or body of a 30-year-old for the last 60 years of your life, which would you want?",
-            "If a crystal ball could tell you the truth about yourself, your life, the future or anything else, what would you want to know?",
-            "Marvel or DC Comics?",
-            "What's the best book you read this year?",
-            "How do you feel about your relationship with your mother?",
-            "What, if anything, is too serious to be joked about?",
-            "If you were to die this evening with no opportunity to communicate with anyone, what would you most regret not having told someone? Why haven’t you told them yet?",
-            "If you could meet any fictional character, who would it be?",
-            "What song best sums you up?",
-            "Which of your five senses would you say is your strongest?",
-            "How old were you when you learned Santa isn't real. How did you find out and how did you react?",
-            "Write about your first job.",
-            "You discover you are in your own version of The Truman Show. What would you do?",
-            "Before making a telephone call, do you ever rehearse what you are going to say? Why?",
-            "What qualities do you want in a romantic partner?",
-            "What famous world festivals would you like to attend?",
-            "What is your favorite holiday?",
-            "What have you read recently on the news that caught your attention?",
-            "You have a chance to be one of the first people to live on Mars. Would you take it?",
-            "What was the first car you drove?",
-            "How often do you recycle? If you don't, why not?"
-        ]
+        "If you were able to live to the age of 90 and retain either the mind or body of a 30-year-old for the last 60 years of your life, which would you want?",
+        "If a crystal ball could tell you the truth about yourself, your life, the future or anything else, what would you want to know?",
+        "Marvel or DC Comics?",
+        "If you had to choose, would you rather shrink to the size of an acorn or grow to the size of an elephant",
+        "If you had to be an animal for a day, what would you pick and why?",
+        "Which Harry Potter character do you most resonate with?",
+        "How would you feel about being completely alone for 100 days?",
+        "How do you feel about your relationship with your mother?",
+        "If you were to die today with no opportunity to communicate with anyone, what would you most regret not having told someone? Why haven’t you told them yet?",
+        "If you could meet any fictional character, who would it be?",
+        "How old were you when you learned Santa isn't real. How did you find out and how did you react?",
+        "You discover you are in your own version of The Truman Show. What would you do?",
+        "Before making a telephone call, do you ever rehearse what you are going to say? Why?",
+        "What famous world festivals would you like to attend?",
+        "You have a chance to be one of the first people to live on Mars. Would you take it?",
+        "How often do you recycle? If you don't, why not?"
+    ]
 
 
     /* function for the 3 Things button*/
@@ -151,10 +153,11 @@ $(document).ready(function() {
             "What is something you learned today?",
             "What is one thing you would like to accomplish today?",
             "What is the dominant emotion in your life right now?",
+            "What have you read recently on the news that caught your attention?",
             "What are you most excited about for the upcoming weekend?", 
             "What is going on in the outside world - political, social, spiritual - that affects how you think about the issue?",
             "What is the most important issue you're dealing with in your life right now?",
-            "I feel most energized when...",
+            "What did you do today that you're most proud of?",
             "Who are you spending most of your time with?",
             "You are taking a stay-cation today. What would you do?",
             "An old friend re-enters your life today. What would you do with them?"
