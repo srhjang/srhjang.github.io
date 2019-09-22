@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(90deg, #85DCBA, #41B3A3);
+    background-image: linear-gradient(100deg, #85DCBA, #6689CC);
     font-family: 'Karla', sans-serif;
     color: #2B483D;
     margin: 0;
@@ -19,7 +19,7 @@ body {
 
 nav {
     top: 0;
-    background-image: linear-gradient(90deg, #85DCBA, #41B3A3) !important;
+    background-image: linear-gradient(90deg, #85DCBA, #6689CC) !important;
     margin-right: 2em;
     padding: 1em;
     display: flex !important;
@@ -115,6 +115,7 @@ h3 {
     margin: 2em;
     font-size: 1.2em;
     color: #2B483D;
+    text-decoration: none;
 }
 
 .app-screenshot {
@@ -124,8 +125,10 @@ h3 {
     color: #2B483D;
 }
 
-a {
+a:link, a:visited {
     color: inherit;
+    text-decoration: none !important;
+    color: #f4f7f6;
 }
 
 .image {
