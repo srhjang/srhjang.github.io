@@ -1,28 +1,21 @@
+//function to initialize materialize framework for materialbox for each image
 $(document).ready(function(){
   $('.materialboxed').materialbox();
 });
 
-
-
-//function to anchor list of apps to appropriate link
+//function to anchor the app list items to appropriate link minus the height of the nav bar
 function offsetAnchor() {
-    if (location.hash.length !== 0) {
-      window.scrollTo(window.scrollX, window.scrollY - 80);
-    }
-  }
-  
-  // Captures click events of all <a> elements with href starting with #
-  $(document).on('click', 'a[href^="#"]', function(event) {
+    window.scrollTo(window.scrollX, window.scrollY - 80)
+}
+
+  //run the offsetAnchor function when any of the app-list-items are clicked
+  $('.app-list-item').click(function() {
     // Click events are captured before hashchanges. Timeout
     // causes offsetAnchor to be called after the page jump.
     window.setTimeout(function() {
-      offsetAnchor();
-    }, 0);
-  });
-  
-  // Set the offset when entering page with hash present in the url
-  window.setTimeout(offsetAnchor, 0);
-
+      offsetAnchor()
+    })
+  })
 
  //when topButton is clicked, run scrolltoTop function to scroll to top of page
   $('#topButton').click(scrollToTop)

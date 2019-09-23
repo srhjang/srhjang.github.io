@@ -1,32 +1,39 @@
 // When buttons are clicked, run functions for each array
 $(document).ready(function() {
-    $('#threeButton').click(getThree) 
-    $('#presentButton').click(getPresent)
+    //passing each array through the getRandom function 
     $('#pastButton').click(function() {getRandom(pastPrompts)})
     $('#futureButton').click(function() {getRandom(futurePrompts)})
     $('#youButton').click(function() {getRandom(youPrompts)})
     $('#surpriseButton').click(function() {getRandom(surprisePrompts)})
+    //clicking threeButton will run the getThree function
+    $('#threeButton').click(getThree) 
+    //clicking the presentButton will reun the getPresent function
+    $('#presentButton').click(getPresent)
+
 
     // declare variable called prev
     let prev;
 
     //function to generate a random index within each array
     function getRandom(option) {
+        //generate random index from the array
         let randomIndex = Math.floor(Math.random() * option.length)
+        //if randomly generated index is equal to previous index, run the function again
         while (prev === randomIndex) {
             randomIndex = Math.floor(Math.random() * option.length)
         }
-        // access array item based on generated random index from function
+        // access array item of randomly generated index 
         var random = option[randomIndex]
+        //print the array item (prompt) in the textbox
         $('.textbox').html(random) 
+        //let prev equal to the randomly generated index to avoid duplicates
         prev = randomIndex
-        
     }
     
     //function for the Present button
     function getPresent () {
         
-        //create arrays with full months and days of the week
+        //create arrays with full months and days of the week as each item
         var monthNames = [ "January", "February", "March", 'April', "May", "June", "July", "August", "September", "October", "November", "December"
         ]
         var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -44,6 +51,7 @@ $(document).ready(function() {
         var mm = monthNames[today.getMonth()]
         var yy = today.getFullYear()
 
+        //print today's date and the randomly generated prompt
         todayDate = "Today is " + dy + ", " + mm + " " + dt + ', ' + yy + '.';
         $('.textbox').html(todayDate + '<br />' + randomSurprise)
         prev = randomPresentIndex
