@@ -1,10 +1,4 @@
-// define arrays with each of the prompt options
-// assign array to an index
-// when button is clicked
-// 1. generate random index
-// 2. change "Write about..." text and display random prompt
-let prev;
-
+// When buttons are clicked, run functions for each array
 $(document).ready(function() {
     $('#threeButton').click(getThree) 
     $('#presentButton').click(getPresent)
@@ -13,16 +7,61 @@ $(document).ready(function() {
     $('#youButton').click(function() {getRandom(youPrompts)})
     $('#surpriseButton').click(function() {getRandom(surprisePrompts)})
 
+    // declare variable called prev
+    let prev;
+
+    //function to generate a random index within each array
     function getRandom(option) {
         let randomIndex = Math.floor(Math.random() * option.length)
         while (prev === randomIndex) {
             randomIndex = Math.floor(Math.random() * option.length)
         }
+        // access array item based on generated random index from function
         var random = option[randomIndex]
         $('.textbox').html(random) 
         prev = randomIndex
+        
+    }
+    
+    //function for the Present button
+    function getPresent () {
+        
+        //create arrays with full months and days of the week
+        var monthNames = [ "January", "February", "March", 'April', "May", "June", "July", "August", "September", "October", "November", "December"
+        ]
+        var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+        let randomPresentIndex = Math.floor(Math.random() * presentPrompts.length)
+        while (prev === randomPresentIndex) {
+            randomPresentIndex = Math.floor(Math.random() * presentPrompts.length)
+        }
+    
+        var randomSurprise = presentPrompts[randomPresentIndex]
+        //define variables to get today's month, date, year
+        var today = new Date()
+        var dy = dayNames[today.getDay()]
+        var dt = today.getDate()
+        var mm = monthNames[today.getMonth()]
+        var yy = today.getFullYear()
+
+        todayDate = "Today is " + dy + ", " + mm + " " + dt + ', ' + yy + '.';
+        $('.textbox').html(todayDate + '<br />' + randomSurprise)
+        prev = randomPresentIndex
     }
 
+    /* function for the 3 Things button*/
+    function getThree() {
+
+        let randomThreeIndex = Math.floor(Math.random() * threePrompts.length)
+        while (prev === randomThreeIndex) {
+            randomThreeIndex = Math.floor(Math.random() * threePrompts.length)
+        }
+        var randomThree = threePrompts[randomThreeIndex]
+        $('.textbox').html("3 " + randomThree)
+        prev = randomThreeIndex
+    }
+
+    // define arrays with each of the prompt items
     var pastPrompts = [
         "What are the turning points in your life - what would be different now if you had made a different choice in the past.",
         "What is your favorite summer childhood memory?",
@@ -102,86 +141,52 @@ $(document).ready(function() {
         "How often do you recycle? If you don't, why not?"
     ]
 
+    var threePrompts = [
+        "things you can't go without everyday",
+        "favorite books",
+        "favorite pizza spots",
+        "things you would take from your home if you need to evacuate",
+        "things you'd do if you weren't so afraid",
+        "favorite TV shows",
+        "favorite movies",
+        "favorite things to wear",
+        "cities you'd like to try living in",
+        "favorite board games",
+        "favorite websites",
+        "weekend activities you enjoy",
+        "of the best Halloween candies",
+        "favorite foods",
+        "favorite cuisines",
+        "favorite fast food restaurants",
+        "desserts you'd like to eat",
+        "things you like to cook",
+        "things you would do if you could live a day without consequences",
+        "favorite musicians/artists",
+        "music genres you enjoy listening to",
+        "favorite animals",
+        "items you would bring to a remote island",
+        "things you would buy if money were no limit",
+        "wishes you would ask a genie",
+        "subjects or activites you would like to be an expert in"
+    ]
 
-    /* function for the 3 Things button*/
-    function getThree() {
-        var threePrompts = [
-            "things you can't go without everyday",
-            "favorite books",
-            "favorite pizza spots",
-            "things you would take from your home if you need to evacuate",
-            "things you'd do if you weren't so afraid",
-            "favorite TV shows",
-            "favorite movies",
-            "favorite things to wear",
-            "cities you'd like to try living in",
-            "favorite board games",
-            "favorite websites",
-            "weekend activities you enjoy",
-            "of the best Halloween candies",
-            "favorite foods",
-            "favorite cuisines",
-            "favorite fast food restaurants",
-            "desserts you'd like to eat",
-            "things you like to cook",
-            "things you would do if you could live a day without consequences",
-            "favorite musicians/artists",
-            "music genres you enjoy listening to",
-            "favorite animals",
-            "items you would bring to a remote island",
-            "things you would buy if money were no limit",
-            "wishes you would ask a genie",
-            "subjects or activites you would like to be an expert in"
-        ]
-
-        let randomThreeIndex = Math.floor(Math.random() * threePrompts.length)
-        while (prev === randomThreeIndex) {
-            randomThreeIndex = Math.floor(Math.random() * threePrompts.length)
-        }
-        var randomThree = threePrompts[randomThreeIndex]
-        $('.textbox').html("3 " + randomThree)
-        prev = randomThreeIndex
-    }
-
-    /* function for the Present button */
-    function getPresent () {
-        var presentPrompts = [
-            "Who made you feel happy today?",
-            "What is the funniest thing that happened to you today?",
-            "What did you enjoy the most in the last 24 hours?",
-            "What was your favorite meal in the last 24 hours?",
-            "What is something you learned today?",
-            "What is one thing you would like to accomplish today?",
-            "What is the dominant emotion in your life right now?",
-            "What have you read recently on the news that caught your attention?",
-            "What are you most excited about for the upcoming weekend?", 
-            "What is going on in the outside world - political, social, spiritual - that affects how you think about the issue?",
-            "What is the most important issue you're dealing with in your life right now?",
-            "What did you do today that you're most proud of?",
-            "Who are you spending most of your time with?",
-            "You are taking a stay-cation today. What would you do?",
-            "An old friend re-enters your life today. What would you do with them?"
-        ]
-
-        var monthNames = [ "January", "February", "March", 'April', "May", "June", "July", "August", "September", "October", "November", "December"
-        ]
-
-        let randomPresentIndex = Math.floor(Math.random() * presentPrompts.length)
-        while (prev === randomPresentIndex) {
-            randomPresentIndex = Math.floor(Math.random() * presentPrompts.length)
-        }
-        
-        var random = presentPrompts[randomPresentIndex]
-
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = monthNames[today.getMonth()];
-        var yy = today.getFullYear();
-
-        today = "Today is " + mm + " " + dd + ', ' + yy + '.';
-        $('.textbox').html(today + '<br />' + random)
-        prev = randomPresentIndex
-    }
+    var presentPrompts = [
+        "Who made you feel happy today?",
+        "What is the funniest thing that happened to you today?",
+        "What did you enjoy the most in the last 24 hours?",
+        "What was your favorite meal in the last 24 hours?",
+        "What is something you learned today?",
+        "What is one thing you would like to accomplish today?",
+        "What is the dominant emotion in your life right now?",
+        "What have you read recently on the news that caught your attention?",
+        "What are you most excited about for the upcoming weekend?", 
+        "What is going on in the outside world - political, social, spiritual - that affects how you think about the issue?",
+        "What is the most important issue you're dealing with in your life right now?",
+        "What did you do today that you're most proud of?",
+        "Who are you spending most of your time with?",
+        "You are taking a stay-cation today. What would you do?",
+        "An old friend re-enters your life today. What would you do with them?"
+    ]
 
 
 })
