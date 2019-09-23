@@ -27,13 +27,14 @@ $(document).ready(function(){
   // When the user clicks on the button, scroll to the top of the page
   function scrollToTop() {
     $('html, body').animate({scrollTop:0}, 'fast');
+    //prevents default browser behavior
       return false;
     // window.scrollTo(0, 0)
   }
 
 })
 
-// the second offsetcAnchor function --> Timeout
+// the second offsetAnchor function --> Timeout
   // function offsetAnchor() {
   //   var navHeight = $('.nav-bar').height()+ 40
   //   window.scrollTo(window.scrollX, window.scrollY - navHeight)
